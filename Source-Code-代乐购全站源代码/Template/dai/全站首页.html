@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>欢迎访问代乐购_首页</title>
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="http://1daigou.com/css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://1daigou.com/css/banner.css" type="text/css" media="screen" />
+{ZL:HTML5()/}
+<style>
+#nav #n0 a{ width:80px; color:#990101; background:url({$CssDir/}images/nav_hover.jpg) center center no-repeat; text-decoration:none;}
+</style>
+</head>
+<body> 
+<div id="top">
+<ul id="top1">
+<li><a href="/" title="首页"><img src="{$CssDir/}images/home.jpg" alt="" /></a></li>
+<li class="sx"><a href="#proUrl" class="abc" title="搜索"><img src="{$CssDir/}images/fdj.jpg" alt="" /></a></li>
+<li><a href="{ZL:GetNodeLinkUrl(43)/}" title="网站地图"><img src="{$CssDir/}images/map.jpg" alt="" /></a></li>
+<li><a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.dailegou.com');" href="#">设为首页</a></li>
+<li><a href="javascript:window.external.addFavorite('http://www.dailegou.com','代乐购');">加入收藏</a></li>
+</ul>
+<ul id="top2">
+<li><a href="/ColumnList.aspx?NodeID=8">照你所说</a></li>
+<li><a href="/user/">我的代乐购</a></li>
+<li><a href="/shopcar.aspx">购物车</a></li>
+<li><a href="/Guestbook/">客服中心</a></li>
+<li><font style="color:#A71F24;">客服热线:<b>92255225</b></font></li>
+</ul>
+<div class="clear"></div>
+</div>
+<!--top end -->
+<div id="head">
+<div id="logo"><a href="/" title="代乐购"><img src="{$CssDir/}images/logo.gif" alt="代乐购" /></a></div>
+<div id="search"><form id="frmNewPro" name="frmNewPro" method="post" action="/NodeElite.aspx?NodeID=1">
+ <input name="proUrl" type="text"  id="proUrl" value="输入购物网站如(淘宝)商品链接的地址就可以代购！http://" onfocus="javascript:if(this.value=='输入购物网站如(淘宝)商品链接的地址就可以代购！http://'){this.value=''};" onblur="javascript:if(this.value==''){this.value='输入购物网站如(淘宝)商品链接的地址就可以代购！http://'}"  />
+<input type="image" name="imageField2" id="imageField2" src="{$CssDir/}images/yjtd.jpg" onclick="return beginsearch();" />
+ </form></div>
+<div class="clear"></div>
+</div>
+<!--head end -->
+
+<div id="nav_bg">
+<ul id="nav">
+<li id="n0"><a href="/">首页</a></li>
+<li id="n1"><a href="{ZL:GetNodeLinkUrl(1)/}">淘淘看看</a></li>
+<li id="n2"><a href="{ZL:GetNodeLinkUrl(2)/}">代购排行</a></li>
+<li id="n3"><a href="{ZL:GetNodeLinkUrl(15)/}">热门推荐</a></li>
+<li id="n4"><a href="{ZL:GetNodeLinkUrl(3)/}">代购演示</a></li>
+<li id="n5"><a href="{ZL:GetNodeLinkUrl(4)/}">费用估算</a></li>
+<li id="n6"><a href="{ZL:GetInfoUrl(38)/}">包裹查询</a></li>
+<li id="n7"><a href="{ZL:GetNodeLinkUrl(9)/}">帮助中心</a></li>
+<li id="n8"><a href="#">论坛</a></li>
+</ul>
+</div>
+<!--nav end -->
+
+
+<div id="home_banner">
+<span style="float:left; font-weight:bold; color:#F00;">代购风向标:</span>
+<ul>
+<li><a href="{ZL:GetNodeLinkUrl(3)/}">代购流程</a></li>
+<li><a href="{ZL:GetInfoUrl(247)/}">关于代购</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(4)/}">费用预估</a></li>
+<li><a href="{ZL:GetInfoUrl(38)/}">订单查询</a></li>
+<li><a href="{ZL:GetInfoUrl(248)/}">代乐优势</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(9)/}">新手帮助</a></li>
+</ul>  
+</ul>
+<div id="search1">
+<iframe src="/Search/indexSearch.aspx" marginwidth="1" marginheight="1" width="195" allowtransparency="true" height="22" scrolling="no" border="0" frameborder="0" ></iframe></div>
+</div>
+<div class="banner"> 
+
+<script type=text/javascript>
+var pic_width=980; //图片宽度
+var pic_height=270; //图片高度
+var button_pos=4; //按扭位置 1左 2右 3上 4下
+var stop_time=3000; //图片停留时间(1000为1秒钟)
+var show_text=0; //是否显示文字标签 1显示 0不显示
+var txtcolor="000000"; //文字色
+var bgcolor="DDDDDD"; //背景色
+var imag=new Array();
+var link=new Array();
+var text=new Array();
+{ZL.Label id="首页循环广告" NodeID="36" ShowNum="5" /} 
+//可编辑内容结束
+var swf_height=show_text==1?pic_height+20:pic_height;
+var pics="", links="", texts="";
+for(var i=1; i<imag.length; i++){
+	pics=pics+("|"+imag[i]);
+	links=links+("|"+link[i]);
+	texts=texts+("|"+text[i]);
+}
+pics=pics.substring(1);
+links=links.substring(1);
+texts=texts.substring(1);
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cabversion=6,0,0,0" width="'+ pic_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="{$CssDir/}swf/focus.swf">');
+document.write('<param name="quality" value="high"><param name="wmode" value="opaque">');
+document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&pic_width='+pic_width+'&pic_height='+pic_height+'&show_text='+show_text+'&txtcolor='+txtcolor+'&bgcolor='+bgcolor+'&button_pos='+button_pos+'&stop_time='+stop_time+'">');
+document.write('<embed src="{$CssDir/}swf/focus.swf" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&pic_width='+pic_width+'&pic_height='+pic_height+'&show_text='+show_text+'&txtcolor='+txtcolor+'&bgcolor='+bgcolor+'&button_pos='+button_pos+'&stop_time='+stop_time+'" quality="high" width="'+ pic_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+document.write('</object>');
+</script>
+ </div>
+<!--home_banner end--> 
+<div id="cont1">
+<div id="cont11">
+<a href="/NodeElite.aspx?NodeID=1"><img src="{$CssDir/}images/txdgd.jpg"></a>
+<div id="cont111">
+<div id="cont111_t">乐购助手</div>
+<iframe src="/login.aspx" marginwidth="1" marginheight="1" allowtransparency="true" scrolling="no" border="0" frameborder="0" width="180px" height="100px"></iframe>
+<div class="clear"></div>
+</div>
+</div>
+<div id="cont12"> 
+<div class="cont131">
+<div class="cont131_t"><span><a href="{ZL:GetNodeLinkUrl(17)/}">更多>></a></span><strong>优惠信息</strong></div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="17" TitleNum="80" ShowNum="7" /}
+
+</ul>
+</div>
+ </div>
+<div id="cont13">
+<div class="cont131">
+<div class="cont131_t"><span><a href="{ZL:GetNodeLinkUrl(18)/}">更多>></a></span><strong>促销状态</strong></div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="18" TitleNum="28" ShowNum="7" /}
+</ul>
+</div>
+
+</div><div class="clear"></div>
+</div><!--one end-->
+<div id="cxjp"><span><a href="{ZL:GetNodeListUrl(15)/}">查看所有畅销精品</a></span><b>畅销精品</b></div>
+<div id="cont2"> 
+<div class="cont21">
+<div class="tg"><img src="{$CssDir/}images/tg.gif"></div> 
+{ZL.Label id="团购商品" NodeID="41" TitleNum="20" ShowNum="1" /}
+</div> 
+<div id="cont22"><a href="{ZL:GetNodeLinkUrl(40)/}"><img src="{$CssDir/}images/tejia.jpg"></a></div>
+
+<div class="rollBox"> 
+<div class="LeftBotton" onmousedown="ISL_GoUp()" onmouseup="ISL_StopUp()" onmouseout="ISL_StopUp()"></div> 
+<div class="Cont" id="ISL_Cont"> 
+<div class="ScrCont"> 
+<div id="List1"> 
+{ZL.Label id="特价现货" NodeID="15" TitleNum="35" ShowNum="10" /}
+<!-- 图片列表 begin -->       
+<!-- <div class="pic"> 
+<a href="#" target="_blank"><img src="{$CssDir/}images/p3.jpg" alt="产品1" /></a> <br>
+<a href="#" target="_blank">恋物尚品1022秋冬新款韩1</a><br>
+市场价：<span class="del">￥121.00</span> <br>
+特价：<span class="red">￥110.00</span>
+</div>        
+图片列表 end --> 
+
+</div> 
+<div id="List2"></div> 
+</div> 
+</div> 
+<div class="RightBotton" onmousedown="ISL_GoDown()" onmouseup="ISL_StopDown()" onmouseout="ISL_StopDown()"></div> 
+</div> 
+<div class="clear"></div>
+</div> <!--图片展示结束--> 
+
+</div><!--two end-->
+<div id="cont3">
+<div class="cont31">
+<div class="cont31_t"><span><a href="{ZL:GetNodeLinkUrl(8)/}">更多...</a></span><b>常见问题</b></div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="8" TitleNum="30" ShowNum="9" /}</ul>
+</div>
+<div class="cont32">
+<div class="cont32_t"><span><a href="{ZL:GetNodeLinkUrl(19)/}">更多...</a></span><b>时尚精品</b></div>
+<ul> 
+{ZL.Label id="输出转向链接_标题" NodeID="20" ShowNum="9" TitleNum="55" /}
+</ul>
+</div>
+
+<div id="cont33" class="cont32">
+<div class="cont32_t"><span><a href="{ZL:GetNodeLinkUrl(22)/}">更多...</a></span><b>专属代购助理服务</b></div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="22" TitleNum="30" ShowNum="5" /}</ul>
+</div>
+
+<div id="cont34">
+<div class="cont34_t" style="height:30px;"><b>合作伙伴</b></div>
+<ul>
+<li><a href="https://www.paypal.com/c2?&mpch=ads&mplx=3484-39238-9395-3" target="_blank"><img src="{$CssDir/}images/hz1.jpg"></a></li>
+<li><a href="http://www.barclays.co.uk/PersonalBanking/P1242557947640" target="_blank"><img src="{$CssDir/}images/hz2.jpg"></a></li>
+<li><a href="http://www.ems.com.cn/" target="_blank"><img src="{$CssDir/}images/hz3.jpg"></a></li>
+<li><a href="http://www.cn.dhl.com/zh.html" target="_blank"><img src="{$CssDir/}images/hz4.jpg"></a></li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div id="cont4">
+<div class="cont31">
+<div class="cont31_t"><span><a href="#">更多...</a></span><b>客户评价</b></div>
+<ul class="ulgrey">
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="21" TitleNum="30" ShowNum="9" /}</ul>
+</div>
+<div id="cont42" class="cont32">
+<div class="cont32_t">
+<span>
+{ZL.Label id="首页单级字典" Diccate="4" NodeID="39" ShowNum="7" /}
+ </span><b>代购推荐</b>
+</div>
+<!--图片滚动开始-->
+<DIV id=demo>
+<table cellPadding=0 align=left border=0 cellspace="0">
+<tbody>
+<tr><td id=demo1 vAlign=top>
+
+<table height=190 cellSpacing=0 cellPadding=3 width="100%" border=0>
+	<tbody>
+	<tr>
+    {ZL.Label id="代购推荐" NodeID="15" TitleNum="36" ShowNum="20" /} 
+	</tr></tbody>
+</table>
+    
+</td>
+<td id=demo2 vAlign=top>
+</td></tr></tbody></table>
+
+<SCRIPT> 
+var speed=30
+demo2.innerHTML=demo1.innerHTML; 
+function Marquee(){
+if(demo2.offsetWidth-demo.scrollLeft<=0)
+demo.scrollLeft-=demo1.offsetWidth
+else{
+demo.scrollLeft++
+}
+}
+var MyMar=setInterval(Marquee,speed)
+demo.onmouseover=function() {clearInterval(MyMar)}
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+</SCRIPT> 
+</div>
+
+
+</div>
+<div class="clear"></div>
+</div>
+
+<div id="cont5">
+<div id="cont51"><img src="{$CssDir/}images/fri.jpg"></div>
+<ul>{ZL.Label id="友情链接列表" ShowNum="30" NodeID="7" /}
+</ul>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div id="bottom">
+<div id="help">
+<ul>
+<span style=" background:url({$CssDir/}images/help.gif) left no-repeat;">新手代购</span>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="10" TitleNum="14" ShowNum="4" /}
+</ul>
+<ul>
+<span style=" background:url({$CssDir/}images/guide.gif) left no-repeat;">代购指南</span>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="11" TitleNum="14" ShowNum="4" /}
+</ul>
+<ul>
+<span style=" background:url({$CssDir/}images/pay.gif) left no-repeat;">代购支付方式</span>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="12" TitleNum="14" ShowNum="4" /}
+</ul>
+<ul>
+<span style=" background:url({$CssDir/}images/traffic.gif) left no-repeat;">配送运输</span>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="13" TitleNum="14" ShowNum="4" /}
+</ul>
+<ul>
+<span style=" background:url({$CssDir/}images/serve.gif) left no-repeat;">售后服务</span>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="14" TitleNum="14" ShowNum="4" /}
+</ul>
+
+<ul  id="kfrx">
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100" align="center"><img src="{$CssDir/}images/lxwm.jpg"  alt="代乐购客户服务在线"/></td>
+  </tr>
+</table>
+<li>+61450980125</li>
+<li>客服时间：9:00-20:00</li>
+<li>周一至周日（北京时间）</li>
+<li>Web@dailegou.com</li>
+</ul>
+</div>
+</div>
+<div id="copyright">
+<div class="copyright-big">
+<div class="copyright-l"><a href="/aboutus.aspx?id=360">关于我们</a>　  |  　<a href="/aboutus.aspx?id=361">联系我们</a>　  |  　<a href="/contactus.aspx">站内留言</a>　  |  　<a href="/aboutus.aspx?id=362">加入我们</a>　  |  　<a href="/aboutus.aspx?id=363">友情链接</a>　  |  　<a href="/aboutus.aspx?id=364">使用协议</a><br />
+  {$Copyright/}</div>
+<div class="copyright-r"><img src="{$CssDir/}images/copyright.gif" /></div>
+</div>
+</div>
+<script language="javascript" type="text/javascript"> 
+<!--//--><![CDATA[//><!-- 
+//图片滚动列表 mengjia 070816 
+var Speed = 5; //速度(毫秒) 
+var Space = 10; //每次移动(px) 
+var PageWidth = 160; //翻页宽度 
+var fill = 0; //整体移位 
+var MoveLock = false; 
+var MoveTimeObj; 
+var Comp = 0; 
+var AutoPlayObj = null; 
+GetObj("List2").innerHTML = GetObj("List1").innerHTML;  
+GetObj('ISL_Cont').scrollLeft = fill; 
+GetObj("ISL_Cont").onmouseover = function(){clearInterval(AutoPlayObj);} 
+GetObj("ISL_Cont").onmouseout = function(){AutoPlay();} 
+AutoPlay(); 
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}} 
+function AutoPlay(){ //自动滚动 
+clearInterval(AutoPlayObj); 
+AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();',5000); //间隔时间 
+} 
+function ISL_GoUp(){ //上翻开始 
+if(MoveLock) return; 
+clearInterval(AutoPlayObj); 
+MoveLock = true; 
+MoveTimeObj = setInterval('ISL_ScrUp();',Speed); 
+} 
+function ISL_StopUp(){ //上翻停止 
+clearInterval(MoveTimeObj); 
+if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0){ 
+Comp = fill - (GetObj('ISL_Cont').scrollLeft % PageWidth); 
+CompScr(); 
+}else{ 
+MoveLock = false; 
+} 
+AutoPlay(); 
+} 
+function ISL_ScrUp(){ //上翻动作 
+if(GetObj('ISL_Cont').scrollLeft <= 0){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft + GetObj('List1').offsetWidth} 
+GetObj('ISL_Cont').scrollLeft -= Space ; 
+} 
+function ISL_GoDown(){ //下翻 
+clearInterval(MoveTimeObj); 
+if(MoveLock) return; 
+clearInterval(AutoPlayObj); 
+MoveLock = true; 
+ISL_ScrDown(); 
+MoveTimeObj = setInterval('ISL_ScrDown()',Speed); 
+} 
+function ISL_StopDown(){ //下翻停止 
+clearInterval(MoveTimeObj); 
+if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0 ){ 
+Comp = PageWidth - GetObj('ISL_Cont').scrollLeft % PageWidth + fill; 
+CompScr(); 
+}else{ 
+MoveLock = false; 
+} 
+AutoPlay(); 
+} 
+function ISL_ScrDown(){ //下翻动作 
+if(GetObj('ISL_Cont').scrollLeft >= GetObj('List1').scrollWidth){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft - GetObj('List1').scrollWidth;} 
+GetObj('ISL_Cont').scrollLeft += Space ; 
+} 
+function CompScr(){ 
+var num; 
+if(Comp == 0){MoveLock = false;return;} 
+if(Comp < 0){ //上翻 
+if(Comp < -Space){ 
+Comp += Space; 
+num = Space; 
+}else{ 
+num = -Comp; 
+Comp = 0; 
+} 
+GetObj('ISL_Cont').scrollLeft -= num; 
+setTimeout('CompScr()',Speed); 
+}else{ //下翻 
+if(Comp > Space){ 
+Comp -= Space; 
+num = Space; 
+}else{ 
+num = Comp; 
+Comp = 0; 
+} 
+GetObj('ISL_Cont').scrollLeft += num; 
+setTimeout('CompScr()',Speed); 
+} 
+} 
+//--><!]]> 
+</script> 
+<!-- JiaThis Button BEGIN -->
+<script type="text/javascript">var jiathis_config = {"data_track_clickback":true};</script>
+<script type="text/javascript" src="http://v1.jiathis.com/code/jiathis_r.js?btn=r4.gif&amp;uid=1502207" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>85</LabelID>
+    <LabelName>全站头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;script type=text/javascript src="/js/jquery-1.5.1.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+function beginsearch(){
+	$("#proUrl").val($("#proUrl").val());
+	$("#frmNewPro").submit();
+}
+&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+//&lt;!--
+function addnewtocart(newaddr){
+	$("#proUrl").val(newaddr);
+	frmNewPro.submit();
+}
+//--&gt;
+&lt;/script&gt;
+
+ 
+&lt;div id="top"&gt;
+&lt;ul id="top1"&gt;
+&lt;li&gt;&lt;a href="/" title="首页"&gt;&lt;img src="{$CssDir/}images/home.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class="sx"&gt;&lt;a href="#proUrl" class="abc" title="搜索"&gt;&lt;img src="{$CssDir/}images/fdj.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(43)/}" title="网站地图"&gt;&lt;img src="{$CssDir/}images/map.jpg" alt="" /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.dailegou.com');" href="#"&gt;设为首页&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="javascript:window.external.addFavorite('http://www.dailegou.com','代乐购');"&gt;加入收藏&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul id="top2"&gt;
+&lt;li&gt;&lt;a href="/ColumnList.aspx?NodeID=8"&gt;照你所说&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/user/"&gt;我的代乐购&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/shopcar.aspx"&gt;购物车&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Guestbook/"&gt;客服中心&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;font style="color:#A71F24;"&gt;客服热线:&lt;b&gt;92255225&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--top end --&gt;
+&lt;div id="head"&gt;
+&lt;div id="logo"&gt;&lt;a href="/" title="代乐购"&gt;&lt;img src="{$CssDir/}images/logo.gif" alt="代乐购" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div id="search"&gt;&lt;form id="frmNewPro" name="frmNewPro" method="post" action="/NodeElite.aspx?NodeID=1"&gt;
+ &lt;input name="proUrl" type="text"  id="proUrl" value="输入购物网站如(淘宝)商品链接的地址就可以代购！http://" onfocus="javascript:if(this.value=='输入购物网站如(淘宝)商品链接的地址就可以代购！http://'){this.value=''};" onblur="javascript:if(this.value==''){this.value='输入购物网站如(淘宝)商品链接的地址就可以代购！http://'}"  /&gt;
+&lt;input type="image" name="imageField2" id="imageField2" src="{$CssDir/}images/yjtd.jpg" onclick="return beginsearch();" /&gt;
+ &lt;/form&gt;&lt;/div&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--head end --&gt;
+
+&lt;div id="nav_bg"&gt;
+&lt;ul id="nav"&gt;
+&lt;li id="n0"&gt;&lt;a href="/"&gt;首页&lt;/a&gt;&lt;/li&gt;
+&lt;li id="n1"&gt;&lt;a href="{ZL:GetNodeLinkUrl(1)/}"&gt;淘淘看看&lt;/a&gt;&lt;/li&gt;
+&lt;li id="n2"&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}"&gt;代购排行&lt;/a&gt;&lt;/li&gt;
+&lt;li id="n3"&gt;&lt;a href="{ZL:GetNodeLinkUrl(15)/}"&gt;热门推荐&lt;/a&gt;&lt;/li&gt;
+&lt;li id="n4"&gt;&lt;a href="{ZL:GetNodeLinkUrl(3)/}"&gt;代购演示&lt;/a&gt;&lt;/li&gt;
+&lt;li id="n5"&gt;&lt;a href="{ZL:GetNodeLinkUrl(4)/}"&gt;费用估算&lt;/a&gt;&lt;/li&gt;
+&lt;li id="n6"&gt;&lt;a href="{ZL:GetInfoUrl(38)/}"&gt;包裹查询&lt;/a&gt;&lt;/li&gt;
+&lt;li id="n7"&gt;&lt;a href="{ZL:GetNodeLinkUrl(9)/}"&gt;帮助中心&lt;/a&gt;&lt;/li&gt;
+&lt;li id="n8"&gt;&lt;a href="#"&gt;论坛&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;!--nav end --&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

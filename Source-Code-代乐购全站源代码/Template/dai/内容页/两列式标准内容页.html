@@ -1,0 +1,78 @@
+﻿{ZL.Source id="文章模型数据源标签"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{SField sid="文章模型数据源标签" FD="Title" page="0"/}_内容正文</title>
+<meta name="Keywords" content="{SField sid="文章模型数据源标签" FD="Tagkey" page="0"/}" />
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" />
+{ZL:HTML5()/}
+<SCRIPT src="{$SiteURL/}/js/linktarget.js" type=text/javascript></SCRIPT> 
+<script src="{$SiteURL/}/js/jquery-1.5.1.min.js" type="text/javascript"></script>
+<script src="{$SiteURL/}/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="{$SiteURL/}/js/jquery.lazyload.js" type="text/javascript"></script>
+<SCRIPT src="{$SiteURL/}/js/ajax.js"></SCRIPT>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div id="cjwt">
+<div id="cjwt_l">
+<div id="cjwt_lt">{SField sid="文章模型数据源标签" FD="Title" page="0"/}</div>
+<div id="cjwt_lc"><h1>{SField sid="文章模型数据源标签" FD="Title" page="0"/}</h1>
+<div id="cjwt_lct">
+
+<abbr><span id="author">作者：{SField sid="文章模型数据源标签" FD="author" page="0"/}</span> <span id="source">来源：{SField sid="文章模型数据源标签" FD="source" page="0"/}</span> <span id="CreateTime">发布时间：{ZL:FormatDate({SField sid="文章模型数据源标签" FD="CreateTime" page="0"/},yyyy-MM-dd)/}</span> <span id="Hits">点击数：<SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="文章模型数据源标签" FD="GeneralID" page="0"/}"></SCRIPT></span>
+<span>
+<img src="http://v.t.qq.com/share/images/s/weiboicon16.png" align="absmiddle"/> <a href="javascript:void(0)" onclick="postToWb();" style="height:16px;font-size:12px;line-height:16px;">转播到腾讯微博</a>
+<script type="text/javascript">
+function postToWb() {
+    var _t = encodeURI(document.title);
+    var _url = encodeURIComponent(document.location);
+    var _appkey = encodeURI("App Key：c3f7533887ef491fa82dda1144b9e3c3"); //你从腾讯获得的appkey
+    var _pic = encodeURI(''); //（例如：var _pic='图片url1|图片url2|图片url3....）
+    var _site = ''; //你的网站地址
+    var _u = 'http://v.t.qq.com/share/share.php?url=' + _url + '&appkey=' + _appkey + '&site=' + _site + '&pic=' + _pic + '&title=' + _t;
+    window.open(_u, '', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no');
+}
+</script>
+</span>
+</abbr></div>
+
+<div class="jia"><div style="float:left; width:1px; height:400px;"></div>{SField sid="文章模型数据源标签" FD="content" page="{SField sid="文章模型数据源标签" FD="K_pages" page="0"/}"/}</div>
+</div>
+</div>
+<div id="cjwt_r">
+<div id="cjwt_rt">代购排行榜</div>
+<ul>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+<li><a href="#">平底鞋新款真皮牛筋底 妈妈鞋..</a></li>
+</ul>
+</div>
+</div>
+<!--主体结束 -->
+<div style="clear:both;"></div>
+{ZL.Label id="全站底部"/}
+
+
+</body>
+</html>

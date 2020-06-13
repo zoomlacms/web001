@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>447</LabelID>
+    <LabelName>全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div id="bottom"&gt;
+&lt;div id="help"&gt;
+&lt;ul&gt;
+&lt;span style=" background:url({$CssDir/}images/help.gif) left no-repeat;"&gt;新手代购&lt;/span&gt;
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="10" TitleNum="14" ShowNum="4" /}
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;span style=" background:url({$CssDir/}images/guide.gif) left no-repeat;"&gt;代购指南&lt;/span&gt;
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="11" TitleNum="14" ShowNum="4" /}
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;span style=" background:url({$CssDir/}images/pay.gif) left no-repeat;"&gt;代购支付方式&lt;/span&gt;
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="12" TitleNum="14" ShowNum="4" /}
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;span style=" background:url({$CssDir/}images/traffic.gif) left no-repeat;"&gt;配送运输&lt;/span&gt;
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="13" TitleNum="14" ShowNum="4" /}
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;span style=" background:url({$CssDir/}images/serve.gif) left no-repeat;"&gt;售后服务&lt;/span&gt;
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="14" TitleNum="14" ShowNum="4" /}
+&lt;/ul&gt;
+
+&lt;ul  id="kfrx"&gt;
+&lt;table width="180" border="0" cellspacing="0" cellpadding="0"&gt;
+  &lt;tr&gt;
+    &lt;td width="100" align="center"&gt;&lt;img src="{$CssDir/}images/lxwm.jpg"  alt="代乐购客户服务在线"/&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;li&gt;+61450980125&lt;/li&gt;
+&lt;li&gt;客服时间：9:00-20:00&lt;/li&gt;
+&lt;li&gt;周一至周日（北京时间）&lt;/li&gt;
+&lt;li&gt;Web@dailegou.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div id="copyright"&gt;
+&lt;div class="copyright-big"&gt;
+&lt;div class="copyright-l"&gt;&lt;a href="{ZL:GetInfoUrl(247)/}"&gt;关于我们&lt;/a&gt;　  |  　&lt;a href="{ZL:GetInfoUrl(249)/}"&gt;联系我们&lt;/a&gt;　  |  　&lt;a href="/guestbook/"&gt;站内留言&lt;/a&gt;　  |  　&lt;a href="{ZL:GetInfoUrl(250)/}"&gt;加入我们&lt;/a&gt;　  |  　&lt;a href="{ZL:GetNodeLinkUrl(7)/}"&gt;友情链接&lt;/a&gt;　  |  　&lt;a href="{ZL:GetInfoUrl(251)/}"&gt;使用协议&lt;/a&gt;&lt;br /&gt;
+  {$Copyright/}&lt;/div&gt;
+&lt;div class="copyright-r"&gt;&lt;img src="{$CssDir/}images/copyright.gif" /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- JiaThis Button BEGIN --&gt;
+&lt;script type="text/javascript"&gt;var jiathis_config = {"data_track_clickback":true};&lt;/script&gt;
+&lt;script type="text/javascript" src="http://v1.jiathis.com/code/jiathis_r.js?btn=r4.gif&amp;amp;uid=1502207" charset="utf-8"&gt;&lt;/script&gt;
+&lt;!-- JiaThis Button END --&gt;
+</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

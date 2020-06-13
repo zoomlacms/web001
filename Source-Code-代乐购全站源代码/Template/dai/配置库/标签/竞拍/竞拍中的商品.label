@@ -1,0 +1,53 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>371</LabelID>
+    <LabelName>竞拍中的商品</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>竞拍</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|TitleNum,30,1,标题长度|ShowNum,20,1,每页显示数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Commodities left join {table1}.dbo.ZL_Compete on {table1}.dbo.ZL_Commodities.ID={table1}.dbo.ZL_Compete.ShopId</LabelTable>
+    <LabelField>ZL_Compete.ShopId,ZL_Compete.ID,{table1}.dbo.ZL_Commodities.LinPrice,{table1}.dbo.ZL_Commodities.Proname,{table1}.dbo.ZL_Commodities.Thumbnails,DepVal</LabelField>
+    <LabelWhere>({table1}.dbo.ZL_Commodities.nodeid=@NodeID or {table1}.dbo.ZL_Commodities.FirstNodeID=@NodeID) and sales=1  and  {table1}.dbo.ZL_Compete.ShopState=1</LabelWhere>
+    <LabelOrder>AddTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;dl&gt;
+&lt;dt&gt;
+&lt;div class="ppPic"&gt;
+&lt;a href="{ZL:GetShopUrl({Field="ShopId"/})/}&amp;ID={Field="ID"/}" target="_blank"&gt;&lt;img src="/{Field="Thumbnails"/}" /&gt;&lt;/a&gt;
+&lt;span class="Ltimg"&gt;&lt;img src="../../Skin/grey/images/Sdian{Field="DepVal"/}.gif" /&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;/dt&gt;
+&lt;dd class="PPInfo"&gt;
+&lt;h3 sizcache="7" sizset="42"&gt;
+&lt;a href="{ZL:GetShopUrl({Field="ShopId"/})/}&amp;ID={Field="ID"/}" target="_blank" title="{Field="Proname"/}"&gt;{Field="Proname"/}&lt;/a&gt;
+&lt;/h3&gt;
+&lt;span class="space" sizcache="7" sizset="43"&gt;保价：&lt;font class="green"&gt;¥1596&lt;/font&gt;  &lt;/span&gt;
+&lt;span&gt;市价：&lt;span class="through"&gt; ¥1696&lt;/span&gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span&gt;现价：&lt;strong class="bPrice"&gt;￥6.60&lt;/strong&gt;&lt;/span&gt;
+&lt;/dd&gt;
+&lt;dd class="countdown"&gt;
+&lt;font class="Mprice2"&gt;00:00:09&lt;/font&gt;
+&lt;/dd&gt;
+&lt;dd class="bidder" sizcache="7" sizset="44"&gt;
+&lt;a class="userName" id="bidder_3234" href="javascript:void(0)"&gt;&lt;font class="blue"&gt; totozhang&lt;/font&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;input  type="button" name="OutPrice1" id="OutPrice1" class="chujia" value="出价"  /&gt;&lt;br /&gt;
+&lt;a href="#" target="_blank"&gt;报价购买&lt;/a&gt;
+
+&lt;/dd&gt;
+&lt;/dl&gt;
+{/Repeate}  
+</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" autoeventwireup="true" inherits="Action_GetTime, App_Web_44bo1q5e" enableEventValidation="false" viewStateEncryptionMode="Never" %>

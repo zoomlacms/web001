@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>452</LabelID>
+    <LabelName>产品推荐</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>代购</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,1,1,节点ID|TitleNum,30,1,标题字数|ShowNum,10,1,显示数量</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_dgmx on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_dgmx.ID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID,{table1}.dbo.ZL_CommonModel.NodeID,{table1}.dbo.ZL_CommonModel.Title,{table1}.dbo.ZL_C_dgmx.elitStar,{table1}.dbo.ZL_C_dgmx.payer,{table1}.dbo.ZL_C_dgmx.pic,{table1}.dbo.ZL_C_dgmx.price,{table1}.dbo.ZL_C_dgmx.shoper,{table1}.dbo.ZL_C_dgmx.source,{table1}.dbo.ZL_C_dgmx.time,{table1}.dbo.ZL_C_dgmx.url,sjurl</LabelField>
+    <LabelWhere>({table1}.dbo.ZL_CommonModel.NodeID=@NodeID or FirstNodeID=@NodeID) and status=99</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_CommonModel.OrderID DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}"&gt;&lt;img  src="{ZL:GetPicUrl({Field="pic"/})/}"/&gt;&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" title="{Field="Title"/}"&gt;{ZL:CutText({Field="Title"/},@TitleNum,..)/}&lt;/a&gt;
+&lt;span class="mony"&gt;￥{ZL:GetMoney({Field="price"/},2,1)/}&lt;/span&gt; 
+&lt;span class="ly"&gt;商家：&lt;a href="{Field="sjurl"/}" target="_blank"&gt;{Field="shoper"/}&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;
+&lt;span class="ly"&gt;推荐指数:&lt;/span&gt;&lt;img src="{$CssDir/}images/Stars{Field="elitStar"/}.gif" /&gt;&lt;br /&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+{/Repeate}   
+{ZL.Page/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>
